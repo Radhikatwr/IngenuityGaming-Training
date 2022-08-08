@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading_Animation</title>
+    <style>
+        .container
+        {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to right, #e5472c, #efbec1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box1{
+            
+            height: 250px;
+        }
+        .box
+        {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: linear-gradient(to right, blue,skyblue);
+            animation: updown 2s ease infinite;
+            
+        }
+        @keyframes updown {
+            0%{
+                transform: translateY(0px) rotate(0deg);
+            }
+            50%{
+                transform: translateY(200px) rotate(180deg);
+            }
+            100%{
+                transform: translateY(0px) rotate(360deg);
+            }
+            
+        }
+        span{
+            font-weight: bold;
+            font-size: 35px;
+            color: black;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .shadow{
+            width: 40px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(124, 120, 120);
+            animation: shade 2s linear infinite;
+            
+        }
+        #dot
+        {
+            font-size: 35px;
+            animation: shade 2s linear infinite;
+        }
+        @keyframes popup {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes shade {
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            50%{
+                transform: scale(.5);
+                opacity: .3;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+
+            <div class="box"></div>
+        </div>
+        <div class="shadow"></div><br><br>
+        <div class="box2">
+
+            <span>LOADING  </span> <span id="dot">...</span>
+        </div>
+    </div>
+    
+</body>
+</html>
