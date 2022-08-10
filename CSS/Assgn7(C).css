@@ -1,0 +1,25 @@
+body
+{
+    background: linear-gradient(to right,#7EE8FA, #EEC0C6);
+    margin-top: 15%;
+    text-align: center;
+    font-size: xx-large;
+    background-color: red;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }  
+}
+
+h2
+{
+    color: rgb(243, 25, 120);
+    font-family: cursive;
+    font-weight: bold;
+}

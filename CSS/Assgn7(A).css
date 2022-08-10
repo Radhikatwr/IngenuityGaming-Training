@@ -1,0 +1,22 @@
+body
+{
+    background: linear-gradient(to right,#9ef508,#7CFFCB);
+    text-align: left;
+    font-family: cursive;
+    margin-top: 15%;
+    font-size: xx-large;
+    position: relative;
+    animation: righttoLeft 10s infinite linear;
+    overflow: hidden;
+  }
+  
+  @keyframes righttoLeft {
+    0%   {left: 0%;}
+    50%  {left: 100%;}
+    100% {left: 0%;}
+  }
+h2
+{
+    color: red;
+
+}
