@@ -42,6 +42,7 @@ function myFunction3()
         clearInterval(myFunc)
     }
    },3000);
+   
 }
 
 function myFunction4()

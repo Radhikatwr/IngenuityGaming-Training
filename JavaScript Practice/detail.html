@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage</title>
+  </head>
+  <body>
+    <h1>Local Storage | Session Storage</h1>
+    <h2>Data Recieved From Storage</h2>
+    <p id="output"></p>
+    <br />
+    <a href="./localStorage.html">Back Page</a>
+    <script>
+      // selectors
+      var output = document.getElementById("output");
+
+      // Recieving Data from Local Storage
+      var data = JSON.parse(window.sessionStorage.getItem("Info"));
+      if (data == null) {
+        output.innerText = "No Data Available in Local Storage";
+      } else
+        output.innerText = data.uname + " " + data.password + " " + data.age;
+    </script>
+  </body>
+</html>
+
+selectors
+
+var toInput = document.querySelector(".todo-input")
+var btn = document.querySelector("button");
+var todoList = document.querySelector(".todo-list")
+
+
+btn.onclick = function createTodo(e)
+ {
+    e.preventDefault();
+    var newDiv = document.createElement("div");
+    newDiv.classList.add('todo');
+
+    var newLi=document.createElement("li");
+    newLi.classList.add("todo_item");
+    newLi.innerHTML = toInput.value;
+    newDiv.appendChild(newLi)
+
+    var cmpltbtn=document.createElement("button");
+    cmpltbtn.classList.add("cmpltbtn");
+    cmpltbtn.innerHTML = <i class="fa fa-check"></i>;
+    newDiv.appendChild(cmpltbtn);
+
+    var newLi=document.createElement("button");
+    deltbtn.classList.add("deltbtn");
+    deltbtn.innerHTML = <i class="fa fa-check"></i>;
+    newDiv.appendChild(deltbtn)
+
+
+
+    todoList.appendChild(newDiv);
+    toInput.value = " ";
+ };
+ todoList.onclick = function checkBtn(e){
+    var check = e.target;
+    <!-- console.log(check); -->
+
+    if(check.classList[0]=="deltbtn")
+    {
+        <!-- console.log("delete button pressed"); -->
+        var parentNode = check.parentElement;
+        console.log(parentNode);
+        parentNode.remove();
+    }
+    else if(check.classList[0]=="deltbtn")
+    {
+        console.log("cmpltbtn button pressed");
+        var parentNode = check.parentElement;
+        parentNode.classList.add("check")
+    }
+
+ }
+
+
+ .todo-container
+ {
+    display:flex;
+    jc:center;
+    align-item:center;
+ }
+ .todo-list
+ {
+    list-style:none;
+    min-height:25%;
+ }
+ .todo
+ {
+    background-color:white;
+    font-size:24px;
+    display:flex;
+    jc:space-between;
+    align-item:center;
+    color:black;
+ }
+ .todo li
+ {
+    flex:1;
+ }
+
+ .cmpltbtn,deltbtn
+ {
+    color:white;
+    background-color:teal;
+    border:none;
+    padding:16px;
+    outline:none;
+    font-sixe:16px;
+ }
+ .deltbtn
+ {
+    background-color:red;
+ }
+ .todo_item
+ {
+    margin: 0 10px;
+ }
+ .fa-trash,.fa-check
+ {
+    pointer-event
+ }
+ .check
+ {
+    opacity:.5;
+    text-decoration:line-through;
+ }
