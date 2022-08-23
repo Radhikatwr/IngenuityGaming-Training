@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background: linear-gradient(#e66465, #9198e5);
+      }
+      .container {
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        color: black;
+       
+      }
+      h1 {
+        padding-top: 25px;
+        justify-content: center;
+        text-align: center;
+        font-weight: bolder;
+      }
+      .form {
+        height: 100vh;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+      h4 {
+        padding-top: 25px;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        color: #444b52;
+        padding-bottom: 20px;
+      }
+      .text {
+        display: flex;
+        margin: 10px;
+        color: black;
+      }
+      label {
+        padding: 0px 14px;
+        font-size: 17px;
+      }
+      input{
+        padding: 5px;
+      }
+      #btn {
+        background-color: rgb(255, 8, 0);
+        width: 105px;
+        height: 50px;
+        border-radius: 8%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        color: white;
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Form</h1>
+      <div class="form">
+        <form action="">
+          <h4>Tell us something about you</h4>
+          <div class="text">
+            <label for="">Name:</label>
+            <input type="text" placeholder="Enter Your Name" />
+          </div>
+          <br />
+          <div class="text">
+            <label for="">Email:</label>
+            <input type="text" placeholder="Enter Your Email" />
+          </div>
+          <br />
+          <div class="text">
+            <label for="">On a scale of 1-10, how good was it?</label>
+            <input
+              type="number"
+              placeholder="Enter a number between 1 and 10"
+            />
+          </div>
+          <br />
+          <div class="text">
+            <label for="">Select a country</label>
+            <select id="country" name="country">
+              <option value="select">Select</option>
+              <option value="australia">India</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+          <br />
+          <div class="text">
+            <label for="">At what time we can contact you?</label>
+            <div id="box">
+              <input type="radio" id="Morning" name="fav_language" />Morning
+              <br />
+              <input type="radio" id="Afternoon" name="fav_language" />Afternoon
+              <br />
+              <input type="radio" id="Evening" name="fav_language" />Evening
+              <br />
+              <input type="radio" id="Night" name="fav_language" />Night
+            </div>
+          </div>
+          <br />
+          <div class="text">
+            <label for="">what emotions did you experience?</label>
+
+            <div id="box">
+              <input type="checkbox" id="Morning" name="fav_language" />Excited
+              <br />
+              <input type="checkbox" id="Afternoon" name="fav_language" />Humble
+              <br />
+              <input type="checkbox" id="Evening" name="fav_language" />Elated
+              <br />
+              <input type="checkbox" id="Night" name="fav_language" />Loved
+            </div>
+          </div>
+          <br />
+          <div class="text">
+            <label for="">please decribe your experience</label>
+            <br />
+            <textarea name="" id="" cols="30" rows="1"></textarea>
+          </div>
+          <br />
+          <button id="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

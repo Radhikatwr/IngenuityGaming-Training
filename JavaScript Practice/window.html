@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Functions</title>
+</head>
+<body>
+    <button id="btn" onclick="openWindow()">Ope new Window</button>
+    <script>
+        function openWindow()
+        {
+
+            var url = "https://www.beta-labs.in/";
+            var windowSize = "height=500 , width=500";
+            var newWindow = window.open(url, "About Page",windowSize);
+            newWindow.moveTo(500,200);
+        }
+    </script>
+</body>
+</html>
