@@ -16,7 +16,7 @@ var restartImg;
 //load assests
 function preload()
 {
-    bgImage=loadImage("Mario_images/bgnew.jpg");
+    bgImage=loadImage("Mario_images/backgrnd1.jpg");
     marioImage=loadAnimation("Mario_images/mar1.png","Mario_images/mar2.png","Mario_images/mar3.png","Mario_images/mar4.png","Mario_images/mar5.png","Mario_images/mar6.png");
     brickImage=loadImage("Mario_images/brick.png");
     coinsImage=loadAnimation("Mario_images/con1.png","Mario_images/con2.png","Mario_images/con3.png","Mario_images/con4.png","Mario_images/con5.png","Mario_images/con6.png");
