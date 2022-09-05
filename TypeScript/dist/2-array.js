@@ -1,0 +1,15 @@
+"use strict";
+let arr1 = [1, 2, 3, 4, 5];
+arr1.push(11);
+console.log(arr1);
+let arr2 = [];
+arr2[0] = "Rahul";
+arr2[1] = "Astha";
+arr2[2] = "Mohit";
+arr2[3] = "Ritu";
+console.log(arr2);
+arr2.forEach((i) => console.log(i));
+let arr3 = [1, 2, 3, 4, "abc", "dfdf"];
+arr3.push("Qwe");
+arr3.push(123);
+let arr4 = [1, 2, 3, 4, 5];
